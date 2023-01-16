@@ -18,7 +18,7 @@ include_once('../../models/Products.php');
 $database = new Database;
 $db =  $database->connect();
 
-$products = new Product($db);
+$product = new Product($db);
 
 if(count($_POST)){
 
@@ -32,7 +32,7 @@ if(count($_POST)){
         'product_discount' => $_POST['product_discount'],
     ];
 
-    if($products->create_new_products($params))
+    if($product->create_new_products($params))
     {
         echo json_encode(['message' => 'Products added successfully']);
     }
