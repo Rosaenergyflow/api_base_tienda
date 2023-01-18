@@ -44,6 +44,7 @@ class Product{
         $products->execute();
 
         return $products;
+        
     }
 
 
